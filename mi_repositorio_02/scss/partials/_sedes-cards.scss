@@ -1,0 +1,79 @@
+// contenedor seccion sedes
+.container__sedes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, max-content));
+    row-gap: 40px;
+    column-gap: 40px;
+    justify-content: center;
+    padding: initial;
+    margin: 4rem;
+}
+
+// propiedades de las cards
+.card-sedes {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(238, 235, 235, 0.627);
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid rgba(206, 206, 206, 0.831);
+    box-shadow: 10px 10px 10px rgba(156, 156, 156, 0.458);
+
+    &:hover{
+        transform: scale(1.1);
+        opacity:1;
+        margin:0 5px;
+        transition: all 0.15s ease-in 1s;
+        transition-property: all;
+        transition-duration:0.30s; 
+        transition-timing-function:ease;
+        transition-delay: .1s;
+    }
+
+    img {
+        border-radius: 6px;
+        margin-bottom: 8px;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 12px;
+        font-weight: 300;
+        color: rgb(33, 33, 33);
+    }
+
+    button {
+        border-radius: 16px;
+        width: fit-content;
+        padding: 5px 40px;
+        border: none;
+        font-size: 16px;
+        background-color: $color-primario;
+        color: white;
+        box-shadow: 3px 3px 3px rgba(206, 206, 206, 0.286);
+        align-self: center;
+
+        &:hover{
+            background-color: $color-secundario;
+        }
+    }
+}
+
+
+// Uso de maps para el peso de fuente de las cards
+$pesos:(
+    regular: 400, 
+    medium: 500, 
+    bold: 700,
+);
+
+@each $fuente, $pesodefuente in $pesos{
+    .f-#{$fuente} {
+        font-weight: $pesodefuente;
+    } 
+}

@@ -1,0 +1,70 @@
+// portada grid
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(16, 16, 16, .5), rgba(16, 16, 16, .8)), url(./../img/foto_portada.webp);
+    background-size: cover;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+    // contenedor
+    .hero__item {
+        grid-column: 2/10;
+        grid-row: 3/8;
+        color: azure;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        // titulo principal
+        .hero__title {
+            font-family: $font-titulos;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: $color-primario;
+            text-align: center;
+        }
+
+        // subtitulo
+        .hero__slogan {
+            font-family: $font-titulos;
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        // CTA
+        .hero__btn {
+            font-size: 1.2em;
+            background: $color-primario;
+            padding: 10px 30px;
+            border: 1px solid rgb(145, 180, 249);
+            border-radius: 30px;
+
+            margin-top: 30px;
+            font-weight: 700;
+
+
+            a {
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+
+            }
+
+        }
+
+        // cta hover
+        .hero__btn:hover {
+            background-color: rgb(27, 27, 27);
+            border: 1px solid rgb(159, 208, 227);
+
+            a {
+                color: $color-secundario;
+            }
+
+
+        }
+    }
+}
